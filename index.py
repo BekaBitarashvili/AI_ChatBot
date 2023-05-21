@@ -1,15 +1,19 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 
-bot = ChatBot("GeorgianAIChatBot", read_only=False, logic_adapters=["chatterbot.logic.BestMatch"])
+
+bot = ChatBot("GeorgianAIChatbot", read_only=False, logic_adapters=["chatterbot.logic.BestMatch"])
 
 list_to_train = [
-    "გამარჯობა",
-    "მოგესალმებით...",
-    "რა გქვია?",
-    "ჩემი სახელია ჩათ-ბოტი",
-    "რამდენი წლის ხარ?",
-    "მე ასაკი არ მაქვს..."
+                "გამარჯობა",
+                "მოგესალმებით...",
+                "რა გქვია?",
+                "ჩემი სახელია ჩათ-ბოტი",
+                "რამდენი წლის ხარ?",
+                "მე ასაკი არ მაქვს",
+                "რა გინდა?",
+                "ჩემი მიზანია დავეხმარო ადამიანებს და ვუპასუხო მათ ყველა შეკითხვას"
+
 ]
 
 list_trainer = ListTrainer(bot)
