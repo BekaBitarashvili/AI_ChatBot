@@ -1,7 +1,6 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
-from flask import Flask, render_template
-
+from flask import Flask, render_template, url_for, request
 
 app = Flask(__name__)
 
@@ -25,25 +24,21 @@ list_to_train = [
     "რა გინდა?",
     "ჩემი მიზანია დავეხმარო ადამიანებს და ვუპასუხო მათ ყველა შეკითხვას",
     "რამე საიტი მითხარი",
-    "აქ შედი https://google.com/"
+    "აქ შედი https://google.com/",
+    "ანეგტოდი მომიყევი",
+    "სვანი ინტერნეტში შევიდა და დაიკარგა :)",
 
-]
-list_to_train2 = [
-    "გამარჯობა",
-    "გაგიმარჯოს",
-    "რა გქვია?",
-    "ასისტენტი",
-    "რამდენი წლის ხარ?",
-    "მე შემქმნეს 2023 წელს...",
-    "რა გინდა?",
-    "მშვიდობა :) ... რა უნდა მინდოდეს გეხმარები..."
 
 ]
 
-# list_trainer = ListTrainer(bot)
-#
-# list_trainer.train(list_to_train)
-# list_trainer.train(list_to_train2)
+
+# trainer = ChatterBotCorpusTrainer(bot)
+# trainer.train("chatterbot.corpus.english")
+
+
+list_trainer = ListTrainer(bot)
+list_trainer.train(list_to_train)
+
 
 # while True:
 #     user_response = input("მომხმარებელი: ")
@@ -55,6 +50,18 @@ def main():
     return render_template("index.html")
 
 
+@app.route("/get")
+def get_bot_response():
+    user_text = request.args.get('userMessage')
+    bot_response = str(bot.get_response(user_text))
+    return bot_response
+
+
+# @app.route("/get")
+# def get_chatbot_response():
+#     userText = request.args.get('userMessage')
+#     return str(bot.get_response(userText))
+
+
 if __name__ == "__main__":
     app.run(debug=True)
-

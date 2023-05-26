@@ -2,24 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat-Bot</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
     <h1>გამარჯობა!!!</h1>
     <div>
         <div id="chatbox">
             <p class="botText"><span>გამარჯობა</span></p>
         </div>
         <div id="userInput">
-            <input id="textInput" type="text" name="userMessage" placeholder="ჩაწერეთ ტექსტი"/>
+            <label for="textInput"></label><input id="textInput" type="text" name="userMessage" placeholder="ჩაწერეთ ტექსტი"/>
             <input id="buttonInput" type="button" value="Send"/>
         </div>
     </div>
 
+    <script>
+        function getUserResponse() {
 
+            var userText = $('#textInput').val();
+            var userHTML = "<p class='userText'><span>" + userText + "</span></p>";
+            $('#textInput').val("");
+            $('#chatbox').append(userHTML);
+            document.getElementById("userInput").scrollIntoView({block:'start', behavior:'smooth'});
+            $.get("/get",{userMessage: userText}).done(function (data){
+                var botHTML = "<p class='botText'><span>" + data + "</span></p>"
+                $('#chatbox').append(botHTML);
+
+            });
+        }
+
+        $('#textInput').keypress(function (e){
+            if(e.which == 13){
+                getUserResponse();
+            }
+        });
+
+        $('#buttonInput').click(function (){
+            getUserResponse();
+        })
+
+
+
+    </script>
 </body>
 </html>
