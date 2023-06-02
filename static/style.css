@@ -1,59 +1,134 @@
 body {
     font-family: monospace;
     height: 100vh;
-    background: linear-gradient(-50deg, #f4f3f3, #dfdfdf, #bfd8d5, #b1bed5);
-	background-size: 400% 400%;
-	position: relative;
-	animation: change 10s ease-in-out infinite;
+    background: linear-gradient(-50deg, #bd8ae1, #882e6c, #504265, #e0e0e0);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
 }
+
 @keyframes change {
-	0% {
-		background-position: 0 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0 50%;
-	}
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 #chatbox {
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 80%;
     margin-top: 50px;
+    padding: 20px;
 }
 
 .botText {
-    font-family: monospace;
+    background: linear-gradient(to right, indianred, darkslateblue);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    max-width: 80%;
     font-size: 16px;
-    text-align: left;
-    line-height: 25px;
-    color: blue;
 }
 
 #userInput {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    margin-top: 50px;
-    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 200px;
 }
 
 #textInput {
-    border-bottom: 3px solid #899909;
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
     font-family: monospace;
     font-size: 16px;
-    margin-bottom: 80px;
+    color: #333;
+    transition: border-color 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#textInput:focus {
+    outline: none;
+    border-color: #899909;
+    box-shadow: 0 2px 8px rgba(137, 153, 9, 0.4);
 }
 
 #buttonInput {
-    padding: 5px;
+    padding: 10px 20px;
     font-family: monospace;
     font-size: 16px;
+    color: #fff;
+    background: linear-gradient(to right, indianred, darkslateblue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#buttonInput:hover {
+    background: linear-gradient(to right, darkslateblue, indianred);
+}
+
+
+#buttonInput:active {
+    background-color: #6a6e05;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
+}
+
+.chatbot-mainbox {
+    background-color: #f2f2f2;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.userText {
+    text-align: right;
+    font-size: 16px;
+}
+
+
+#downscrollButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, indianred, darkslateblue);
+    color: white;
+    font-family: monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#downscrollButton:hover {
+    background: linear-gradient(to right, darkslateblue, indianred);
+}
+
+#downscrollButton:active {
+    background-color: #6a6e05;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
