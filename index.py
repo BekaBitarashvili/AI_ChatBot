@@ -45,8 +45,6 @@ trainer.train([
     "Gtech team is a group of people with the same vision and values. Things that matter in the company are shared: "
     "quality of work, advancing in learning, communications, and feedback from clients, reaching the deadlines, "
     "time management, responsibilities, positive vibes, and fun.",
-    "Georgia Tech Tbilisi",
-    "Yes I know This Company, 1. Gtech Services , 2. Where is the Gtech office , 3. Tell me about Gtech Team",
     "Gtech Website",
     "You Can Visit: https://georgiatech.eu",
     "Gtech",
@@ -146,6 +144,28 @@ trainer.train([
     "Spider-Man.",
     "Favorite type of cuisine?",
     "Italian",
+    "Gtech office",
+    "Tbilisi Gardens, 10 Mikheil Asatiani Street",
+    "Georgia Tech",
+    "Gtech team is a group of people with the same vision and values. Things that matter in the company are shared: "
+    "quality of work, advancing in learning, communications, and feedback from clients, reaching the deadlines, "
+    "time management, responsibilities, positive vibes, and fun.",
+    "Georgia Tech Tbilisi",
+    "Gtech team is a group of people with the same vision and values. Things that matter in the company are shared: "
+    "quality of work, advancing in learning, communications, and feedback from clients, reaching the deadlines, "
+    "time management, responsibilities, positive vibes, and fun.",
+    "Tell me Joke",
+    "Did you hear the one about the mountain goats in the andes? It was 'ba a a a a a d'",
+    "How was your weekend?",
+    "It was great! I spent time with family and enjoyed some outdoor activities.",
+    "What's your plan for lunch today?",
+    "Glovo or Wolt :)",
+    "Favorite tech gadget?",
+    "Mac",
+    "What's your go-to coding language?",
+    "Python",
+    "Favorite social media platform?",
+    "Facebook, Instagram and Twitter",
 
 ])
 
