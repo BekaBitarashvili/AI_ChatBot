@@ -230,6 +230,10 @@ trainer3.train([
     "CEO",
     "Pascal Lauffer",
     "CEO",
+    "Tatuli Turashvili",
+    "Tatuli is a Marketing Manager at Gtech",
+    "Who is Tatuli",
+    "Tatuli is a Marketing Manager at Gtech",
 
 ])
 
