@@ -1,4 +1,5 @@
 from chatterbot import ChatBot
+from time import time
 from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
 from flask import Flask, render_template, url_for, request
 
@@ -14,6 +15,7 @@ bot = ChatBot("Gtech Chatbot", read_only=False,
                   }
               ])
 
+
 trainer = ChatterBotCorpusTrainer(bot)
 trainer.train("chatterbot.corpus.english")
 
@@ -27,7 +29,7 @@ trainer2 = ListTrainer(bot)
 trainer3 = ListTrainer(bot)
 trainer4 = ListTrainer(bot)
 
-# Basic Info about Gtech
+# Basic Info about Crystal
 trainer.train([
     "What is your name?",
     "My name is Gtech_Bot.",
@@ -237,7 +239,7 @@ trainer3.train([
 
 ])
 
-# Extra Stuff About Gtech
+# Extra Stuff About Crystal
 trainer4.train([
     "Thursday",
     "Pizza Day at Gtech!",

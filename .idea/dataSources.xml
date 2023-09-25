@@ -9,7 +9,7 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="user_questions" uuid="69ba57c5-7927-45b3-a131-ac3630c9868e">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>8b33255f-81b6-4005-998d-93a99dc4502c</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\User\PycharmProjects\Georgian_AI_ChatBot\user_questions.db</jdbc-url>
