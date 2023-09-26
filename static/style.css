@@ -1,7 +1,7 @@
 body {
     font-family: monospace;
     height: 100vh;
-    background: linear-gradient(-50deg, #bd8ae1, #882e6c, #504265, #e0e0e0);
+    background: linear-gradient(-50deg, #262424, #50231e, #e7310e, #e0e0e0);
     background-size: 400% 400%;
     position: relative;
     animation: change 10s ease-in-out infinite;
@@ -28,7 +28,7 @@ body {
 }
 
 .botText {
-    background: linear-gradient(to right, indianred, darkslateblue);
+    background: linear-gradient(to right, #171515, #f1653a);
     color: white;
     border-radius: 5px;
     padding: 10px;
@@ -71,7 +71,7 @@ body {
     font-family: monospace;
     font-size: 16px;
     color: #fff;
-    background: linear-gradient(to right, indianred, darkslateblue);
+    background: linear-gradient(to right, #171515, #f1653a);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -81,7 +81,7 @@ body {
 
 
 #buttonInput:hover {
-    background: linear-gradient(to right, darkslateblue, indianred);
+    background: linear-gradient(to right, #171515, #f1653a);
 }
 
 
@@ -115,7 +115,7 @@ h1 {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(to right, indianred, darkslateblue);
+    background: linear-gradient(to right, #171515, #f1653a);
     color: white;
     font-family: monospace;
     font-size: 16px;
@@ -125,7 +125,7 @@ h1 {
 }
 
 #downscrollButton:hover {
-    background: linear-gradient(to right, darkslateblue, indianred);
+    background: linear-gradient(to right, #171515, #f1653a);
 }
 
 #downscrollButton:active {
