@@ -31,8 +31,8 @@ trainer4 = ListTrainer(bot)
 
 # Basic Info about Crystal
 trainer.train([
-    "What is your name?",
-    "My name is Gtech_Bot.",
+    "რა გქვია?",
+    "ჩემი სახელია კრისტალ-ბოტი.",
 
 ])
 
@@ -49,15 +49,13 @@ trainer2.train([
 
 # Personal Stuff
 trainer3.train([
-    "Nika Kalandadze",
-    "Nika is a Front Dev at Gtech",
+    "ბექა ბიტარაშვილი",
+    "QA ინჟინერი",
 
 ])
 
 # Extra Stuff About Crystal
 trainer4.train([
-    "Thursday",
-    "Pizza Day at Gtech!",
     "Work From Home or Office?",
     "Hybrid!!!",
 
