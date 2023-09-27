@@ -10,7 +10,7 @@ bot = ChatBot("Crystal Chatbot", read_only=False,
 
                   {
                       "import_path": "chatterbot.logic.BestMatch",
-                      "default_response": "I don't have an answer to this question yet :)",
+                      "default_response": "ამ კითხვაზე ჯერ არ მაქვს პასუხი :)",
                       "maximum_similarity_threshold": 0.95
                   }
               ])
@@ -33,6 +33,8 @@ trainer4 = ListTrainer(bot)
 trainer.train([
     "რა გქვია?",
     "ჩემი სახელია კრისტალ-ბოტი.",
+    "რა გინდა?",
+    "შევეცდები დაგეხმაროთ.",
 
 ])
 
