@@ -5,7 +5,7 @@ from flask import Flask, render_template, url_for, request
 
 app = Flask(__name__)
 
-bot = ChatBot("Crystal Chatbot", read_only=False,
+bot = ChatBot("Chatbot", read_only=False,
               logic_adapters=[
 
                   {
@@ -33,7 +33,7 @@ trainer5 = ListTrainer(bot)
 # Basic Info about Crystal
 trainer.train([
     "რა გქვია?",
-    "ჩემი სახელია კრისტალ-ბოტი.",
+    "ჩემი სახელია ჩათ-ბოტი.",
     "რა გინდა?",
     "შევეცდები დაგეხმაროთ.",
     "დამელაპარაკე",
